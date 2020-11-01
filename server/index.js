@@ -5,7 +5,7 @@ const bodyParser = require('body-parser');
 const cors = require('cors');
 const morgan = require('morgan');
 const path = require('path');
-const router = require('./router.js');
+const router = require('./router');
 
 const app = express();
 const PORT = 3000;
@@ -24,6 +24,7 @@ app.use(bodyParser.urlencoded({ extended: true }));
 // outputs HTTP requests to console
 app.use(morgan('dev'));
 
+//throw new TypeError('Router.use() requires a middleware function but got a ' + gettype(fn))
 app.use('/', router);
 
 app.listen(PORT, () => console.log(`Server is listening on port ${PORT}`));
