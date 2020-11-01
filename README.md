@@ -19,12 +19,12 @@ This repo is recommended to be used with `MySQL 5.7`.
 * [MySQL](https://github.com/mysqljs/mysql): MySQL Github documentation
 
 ## Step 1
-* Create database `foodDB` within MySQL
-* Establish connection to database in `database/index.js`
+X Create database `foodDB` within MySQL
+X Establish connection to database in `database/index.js`
 
 ## Step 2
-* Create a schema in `database/schema.sql` to describe our `food` table
-* Run schema file in terminal
+X Create a schema in `database/schema.sql` to describe our `food` table
+X Run schema file in terminal
 
 ## Step 3
 * Create a seeding function in `database/seed.js` to populate table with at least 5 records
@@ -33,7 +33,7 @@ This repo is recommended to be used with `MySQL 5.7`.
 ## Step 4
 * Create dbHelper functions in `database/dbHelpers.js`
 * Create controller functions in `server/controllers.js`
-* Create routes in `server/router.js`
+X Create routes in `server/router.js`
 * Use dbHelper functions within your controller functions
 
 ## Step 5

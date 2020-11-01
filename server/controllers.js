@@ -1,11 +1,21 @@
-
+const controllers = require('../database/dbHelpers.js')
 module.exports = {
   get: (req, res) => {
-    console.log(req.body)
-    res.send('Hello World')
+    controllers.get((err, results) => {
+      if (err) {
+        res.status(404).send(err);
+      } else {
+        res.status(200).send(results);
+      }
+    })
   },
 
   post: (req, res) => {
-    res.send(`Hi, sending post request`)
+    controllers.post(req.body, (err, results) => {
+      if (err) { res.status(404).send(err); }
+      res.status(200).send(results);
+    })
   }
 }
+
+// Slow in how to use these requests
